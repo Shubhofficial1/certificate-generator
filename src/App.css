@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 90vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar {
+  flex: 0.3;
+  padding-top: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid slategray;
+  padding-left: 50px;
+  margin: 0px 20px;
+  text-transform: capitalize;
+}
+.sidebar button {
+  width: inherit;
+  background-color: #3db2ff;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  color: white;
+  transition: all ease-in-out 0.2s;
+}
+
+.sidebar button:hover {
+  transform: scale(1.01);
+}
+
+.mainbar {
+  flex: 0.6;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  border-radius: 10px;
+}
+.mainbar h1 {
+  font-size: 22px;
   color: white;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: absolute;
+  top: 200px;
+  left: 770px;
 }
 
-.App-link {
-  color: #61dafb;
+.mainbar img {
+  width: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 6px 6px 5px 3px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.notes {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 100px;
+  color: #334756;
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
+    height: inherit;
   }
-  to {
-    transform: rotate(360deg);
+  .sidebar {
+    margin-bottom: 40px;
+    margin-left: 60px;
   }
 }
